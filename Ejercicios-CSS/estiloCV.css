@@ -1,0 +1,24 @@
+div{
+    border: 2px solid #e35920;
+    margin: 30px 40px;
+    padding: 15px;
+    background-color: rgba(239, 189, 158, 100);
+    border-radius: 15px;
+    box-shadow: 6px 8px #cc5433;
+}
+#usuario{
+    float: left;
+    width: 10%;
+    border-radius: 50%;
+}
+body{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e1ee05, #e57f3c);
+}
+h1, h2, h3{
+    text-shadow: 2px 3px #dc91a9;
+}
+.tituloPrincipal{
+    font-weight: bold;
+}
