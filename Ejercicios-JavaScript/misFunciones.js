@@ -67,3 +67,31 @@ convertirGR = (id) => {
         document.getElementById("grados").value = (rad*180)/Math.PI;
     }
 }
+
+/**
+ * Muestra u oculta un div en la parte inferior
+ * @method mostrar_ocultar
+ * @param {string} id - Id del elemento input del html
+ */
+
+let mostrar_ocultar = (id) => {
+    if(id==="mostrarDiv"){
+        document.getElementsByName("unDiv")[0].style.display = 'block';
+    } else {
+        document.getElementsByName("unDiv")[0].style.display = 'none';
+    }
+}
+
+/**
+ * Suma dos inputs introducidos por el usuario
+ * @method sumar
+ */
+
+let sumar = () => {
+    //Agregar verificacion de letras para no obtener resultado NaN
+    let res, s1, s2;
+    s1 = Number(document.operacionesMat.sum_num1.value);
+    s2 = Number(document.operacionesMat.sum_num2.value);
+    res = s1 + s2;
+    document.operacionesMat.sum_total.value = res;
+}
