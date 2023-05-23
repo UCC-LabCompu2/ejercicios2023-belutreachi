@@ -114,6 +114,11 @@ let restar = () => {
     document.operacionesMat.res_total.value = res;
 }
 
+/**
+ * Multiplica dos inputs introducidos por el usuario
+ * @method multiplicar
+ */
+
 let multiplicar = () => {
     let res, m1, m2;
     m1 = Number(document.operacionesMat.mul_num1.value);
@@ -123,6 +128,11 @@ let multiplicar = () => {
     document.operacionesMat.mul_total.value = res;
 }
 
+/**
+ * Divide dos inputs introducidos por el usuario
+ * @method dividir
+ */
+
 let dividir = () => {
     let res, d1, d2;
     d1 = Number(document.operacionesMat.div_num1.value);
@@ -130,6 +140,19 @@ let dividir = () => {
     res = d1/d2;
     document.getElementById("totalD").innerHTML = res;
     document.operacionesMat.div_total.value = res;
+}
+
+/**
+ * Si el campo contiene una letra, blanquea el campo
+ * @method verLetra
+ * @param {string} id - Id del elemento input del html
+ * @param {number/string} value - Contiene el valor del imput que ingreso el usuario
+ */
+
+let verLetra = (id, value) => {
+    if(isNaN(value)){
+        document.getElementById(id).value = "";
+    }
 }
 
 
@@ -163,7 +186,7 @@ let cargarValor = () => {
 }
 
 let guardarLS = () => {
-    const dist = document.getElementById("distancai").value;
+    const dist = document.getElementById("distancia").value;
     const uni = document.getElementsByName("unidades")[0].value;
 
     window.open("web2.html");
