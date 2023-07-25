@@ -185,7 +185,10 @@ let cargarValor = () => {
     document.getElementById("dist").value = `${distancia} ${unidad}`;
 }
 
-
+/**
+ * guarda datos ingresados usando local storage
+ * @method guardarLS
+ */
 
 let guardarLS = () => {
     const dist = document.getElementById("distancia").value;
@@ -196,6 +199,11 @@ let guardarLS = () => {
     localStorage.setItem("unidadLS", uni);
 }
 
+/**
+ * toma los valores almacenados en el local storage para cargarlos en el input correspondioente
+ * @method cargarLS
+ */
+
 let cargarLS = () =>{
     console.log("Se cargara el Local Storage");
 
@@ -204,7 +212,10 @@ let cargarLS = () =>{
     document.getElementById("dist").innerHTML = `${distancia} ${unidad}`;
 }
 
-
+/**
+ * dibuja un circulo y un cuadrado en el canvas
+ * @method dibujarCirculoCuadrado
+ */
 
 let dibujarCirculoCuadrado = () => {
     const canvas = document.getElementById("myCanvas");
@@ -223,11 +234,20 @@ let dibujarCirculoCuadrado = () => {
     ctx.fill();
 }
 
+/**
+ * limpia el dibujo del canvas
+ * @method limpiarCanvas
+ */
+
 let limpiarCanvas = () => {
     let canvas = document.getElementById("myCanvas");
     canvas.width = canvas.width;
 }
 
+/**
+ * dibuja en el mini paint
+ * @method dibujar
+ */
 
 var bandera;
 let dibujar = (event) => {
@@ -246,6 +266,11 @@ let dibujar = (event) => {
         ctx.fill;
     }
 }
+
+/**
+ * dibuja un cuadriculado en el canvas
+ * @method dibujarCuadriculado
+ */
 
 
 let dibujarCuadriculado = () => {
@@ -304,6 +329,13 @@ let dibujarCuadriculado = () => {
 
 }
 
+/**
+ * Dibujamos el auto en el canvas y permitimos que se limpie el canvas
+ * @method dibujarImagen
+ * @param {number} posX - posicion en x que ingresa el usuario en el input de x
+ * @param {number} posY - posicion en y que ingresa el usuario en el input de y
+ */
+
 let dibujarImagen = (posX, posY) => {
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
@@ -326,15 +358,32 @@ let dibujarImagen = (posX, posY) => {
 
 }
 
+/**
+ * cerramos el dialog
+ * @method cerrarDialog
+ */
+
 let cerrarDialog = () => {
     const dialog = document.getElementById("myDialog");
     dialog.close();
 }
 
+
+/**
+ * abrimos el dialog si el usuario ingresa algun valor que excede los limites del canvas
+ * @method openDialog
+ */
+
 let openDialog = () => {
     const dialog = document.getElementById("myDialog");
     dialog.showModal();
 }
+
+
+/**
+ * anima la imagen para que se mueva a lo largo del canvas
+ * @method animarAuto
+ */
 
 
 var x = 0;
